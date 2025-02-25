@@ -22,11 +22,11 @@ class Road {
   }
 
   getLaneCenter(laneIndex) {
-    const lineWidth = this.width / this.laneCount;
+    const laneWidth = this.width / this.laneCount;
     return (
       this.left +
-      lineWidth / 2 +
-      Math.min(laneIndex, this.laneCount - 1) * lineWidth
+      laneWidth / 2 +
+      Math.min(laneIndex, this.laneCount - 1) * laneWidth
     );
   }
 
@@ -37,13 +37,13 @@ class Road {
     for (let i = 1; i <= this.laneCount - 1; i++) {
       const x = lerp(this.left, this.right, i / this.laneCount);
 
-      ctx.setLineDash([30, 30]);
-
+      ctx.setLineDash([20, 20]);
       ctx.beginPath();
       ctx.moveTo(x, this.top);
       ctx.lineTo(x, this.bottom);
       ctx.stroke();
     }
+
     ctx.setLineDash([]);
     this.borders.forEach((border) => {
       ctx.beginPath();
@@ -52,8 +52,4 @@ class Road {
       ctx.stroke();
     });
   }
-}
-
-function lerp(A, B, t) {
-  return A + (B - A) * t;
 }
