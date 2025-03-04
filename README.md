@@ -32,16 +32,5 @@ This project implements a simple self-driving car simulation using JavaScript an
 - Train the AI by running multiple simulations.
 - Observe the AI learning and improving over time.
 
-## Future Improvements
-- Implement a better neural network architecture.
-- Add more complex tracks and obstacles.
-- Enhance the UI for better visualization.
 
-## Author
-**Kristina Shrestha**  
-📧 [Your Email]  
-🔗 [Your LinkedIn]  
-
-## License
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
